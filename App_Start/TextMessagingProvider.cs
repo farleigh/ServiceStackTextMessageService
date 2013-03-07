@@ -42,7 +42,7 @@ namespace ServiceStackPhoneMessageService
 
         public void AddPhone(Phone phone)
         {
-            if (!phones.ContainsKey(phone.Number))
+            if (phones.ContainsKey(phone.Number))
             {
                 phones.Remove(phone.Number);
             }
